@@ -21,9 +21,9 @@
     echo json_encode($employeeArr);
     }
     else{
-    http_response_code(404);
-    echo json_encode(
-    array("message" => "No record found.")
-    );
+        http_response_code(404);
+        echo json_encode(
+            array("message" => "No record found.")
+        );
     }
 ?>
