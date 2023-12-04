@@ -9,8 +9,6 @@
     $database = new Database();
     $db = $database->getConnection();
     $item = new Employee($db);
-
-
     $item->name = $_GET['name'];
     $item->email = $_GET['email'];
     $item->designation = $_GET['designation'];
@@ -21,3 +19,4 @@
         echo 'Employee could not be created.';
     }
 ?>
+
