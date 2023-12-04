@@ -11,14 +11,13 @@
     $itemCount = $records->num_rows;
     echo json_encode($itemCount);
     if($itemCount > 0){
-    $employeeArr = array();
-    $employeeArr["body"] = array();
-    $employeeArr["itemCount"] = $itemCount;
-    while ($row = $records->fetch_assoc())
-    {
-    array_push($employeeArr["body"], $row);
-    }
-    echo json_encode($employeeArr);
+        $employeeArr = array();
+        $employeeArr["body"] = array();
+        $employeeArr["itemCount"] = $itemCount;
+        while ($row = $records->fetch_assoc()){
+            array_push($employeeArr["body"], $row);
+        }
+        echo json_encode($employeeArr);
     }
     else{
         http_response_code(404);
