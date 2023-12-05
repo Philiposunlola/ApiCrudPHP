@@ -11,7 +11,6 @@
     $db = $database->getConnection();
     $item = new Employee($db);
     $item->id = isset($_GET['id']) ? $_GET['id'] : die();
-
     if($item->deleteEmployee()){
         echo json_encode("Employee deleted.");
     } else{
