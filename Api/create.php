@@ -10,6 +10,7 @@
     $records = $items->getEmployees();
     $itemCount = $records->num_rows;
     echo json_encode($itemCount);
+    
     if($itemCount > 0){
         $employeeArr = array();
         $employeeArr["body"] = array();
